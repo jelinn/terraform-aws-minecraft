@@ -98,7 +98,7 @@ data "template_file" "user_data" {
 
 // Security group for our instance - allows SSH and minecraft 
 module "ec2_security_group" {
-  source = "git@github.com:terraform-aws-modules/terraform-aws-security-group.git?ref=master"
+  source = "app.terraform.io/JLOrg/security-group/aws"
 
   name        = "${var.name}-ec2"
   description = "Allow SSH and TCP ${var.mc_port}"
